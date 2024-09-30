@@ -8,7 +8,7 @@ class My_Model(models.Model):
 
 # Defining signal receiver
 @receiver(post_save, sender=My_Model)
-def my_handler(sender, instance **kwargs):
+def my_handler(sender, instance, **kwargs):
     print('Saved Instance: ' + instance.name )
 
 # Saving an instance
